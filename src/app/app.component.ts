@@ -4,9 +4,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { ButtonModule } from 'primeng/button'; 
 
 
+
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MatToolbarModule, ButtonModule],
+  standalone: true,
+  imports: [RouterOutlet, MatToolbarModule, ButtonModule, ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
