@@ -1,16 +1,19 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { ButtonModule } from 'primeng/button'; 
-
-
+import { LoginComponent } from './features/auth/login/login.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MatToolbarModule, ButtonModule, ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  imports: [LoginComponent],
+  template: `<app-login></app-login>`,
+  styles: [`
+    :host {
+      display: block;
+      width: 100%;
+      min-height: 100vh;
+    }
+  `]
 })
 export class AppComponent {
   title = 'smart-admin-panel';
